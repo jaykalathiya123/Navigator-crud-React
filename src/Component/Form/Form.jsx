@@ -2,74 +2,72 @@ import React from 'react';
 
 const StudentRegistrationForm = ({ handleForm, handleSubmit }) => {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-100 to-green-300">
-            <div className="w-full max-w-lg bg-white shadow-lg rounded-lg p-8 my-5">
-                <h2 className="text-3xl font-bold text-center text-green-800 mb-6">Student Registration</h2>
-                
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                    {/* Name Field */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Full Name</label>
-                        <input
-                            type="text"
-                            name='name'
-                            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-                            placeholder="Full Name"
-                            onChange={handleForm} 
-                        />
-                    </div>
+<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-200 to-blue-300">
+  <div className="w-full max-w-lg bg-white shadow-xl rounded-2xl p-10 my-5 border-t-8 border-blue-500 transform transition duration-500 hover:scale-105">
+    <h2 className="text-4xl font-extrabold text-center text-blue-700 mb-8">Registration</h2>
 
-                    {/* Email Field */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-                            placeholder="Email Address"
-                            onChange={handleForm} 
-                        />
-                    </div>
+    <form className="space-y-8" onSubmit={handleSubmit}>
+      {/* Name Field */}
+      <div className="relative">
+        <label className="block text-md font-semibold text-gray-700 mb-2">Full Name</label>
+        <input
+          type="text"
+          name="name"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition-shadow duration-300 transform hover:scale-105"
+          placeholder="Your full name"
+          onChange={handleForm}
+        />
+      </div>
 
+      {/* Email Field */}
+      <div className="relative">
+        <label className="block text-md font-semibold text-gray-700 mb-2">Email</label>
+        <input
+          type="email"
+          name="email"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition-shadow duration-300 transform hover:scale-105"
+          placeholder="Email address"
+          onChange={handleForm}
+        />
+      </div>
 
-                    {/* Course Field */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Course</label>
-                        <input
-                            type="text"
-                            name="course"
-                            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-                            placeholder="Course Name"
-                            onChange={handleForm} 
-                        />
-                    </div>
+      {/* Course Field */}
+      <div className="relative">
+        <label className="block text-md font-semibold text-gray-700 mb-2">Course</label>
+        <input
+          type="text"
+          name="course"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition-shadow duration-300 transform hover:scale-105"
+          placeholder="Course name"
+          onChange={handleForm}
+        />
+      </div>
 
-        
+      {/* Message Field */}
+      <div className="relative">
+        <label className="block text-md font-semibold text-gray-700 mb-2">Additional Information</label>
+        <textarea
+          name="message"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition-shadow duration-300 transform hover:scale-105"
+          rows="4"
+          placeholder="Additional information"
+          onChange={handleForm}
+        ></textarea>
+      </div>
 
-                    {/* Message Field */}
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Additional Information</label>
-                        <textarea
-                            name="message"
-                            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500"
-                            rows="4"
-                            placeholder="Additional Information"
-                            onChange={handleForm} 
-                        ></textarea>
-                    </div>
+      {/* Submit Button */}
+      <div className="text-center">
+        <button
+          type="submit"
+          className="w-full py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white font-bold rounded-lg transform transition duration-500 hover:scale-105 shadow-lg hover:shadow-2xl hover:from-green-600 hover:to-blue-700"
+        >
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 
-                    {/* Submit Button */}
-                    <div className="text-center">
-                        <button
-                            type="submit"
-                            className="w-full py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 focus:ring-4 focus:ring-green-500 transition duration-300"
-                        >
-                            Register
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
     );
 };
 
